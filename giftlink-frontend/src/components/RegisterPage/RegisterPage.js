@@ -17,7 +17,7 @@ function RegisterPage() {
     const [password, setPassword] = useState('');
 
     //Step 1 - Task 4
-     const [showerr, setShowerr] = useState('');
+    const [showerr, setShowerr] = useState('');
 
     //Step 1 - Task 5
     const navigate = useNavigate();

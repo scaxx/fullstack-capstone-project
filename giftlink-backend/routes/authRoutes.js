@@ -21,15 +21,15 @@ const JWT_SECRET = process.env.JWT_SECRET;
 
 router.post('/register', async (req, res) => {
     try {
-      //Connect to `giftsdb` in MongoDB through `connectToDatabase` in `db.js`.
-      const db = await connectToDatabase();
+        //Connect to `giftsdb` in MongoDB through `connectToDatabase` in `db.js`.
+        const db = await connectToDatabase();
 
 
 
-      const collection = db.collection("users");
+        const collection = db.collection("users");
 
 
-      const existingEmail = await collection.findOne({ email: req.body.email });
+        const existingEmail = await collection.findOne({ email: req.body.email });
 
         if (existingEmail) {
             logger.error('Email id already exists');
